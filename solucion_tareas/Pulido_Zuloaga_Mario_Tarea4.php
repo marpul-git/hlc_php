@@ -1,4 +1,4 @@
-<?
+<?php
 
 $mario=5;
 echo “Este es el valor de mario: ”,$mario, “<br>”;
