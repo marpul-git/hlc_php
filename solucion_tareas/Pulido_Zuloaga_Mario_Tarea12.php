@@ -1,10 +1,8 @@
-
-<pre>
 <?php
 
-
-        
-        $a = array
+$tablas=array
+        (
+        "Sa" => array
             (
             "0"=>"Domingo",
             "1"=>"Lunes",
@@ -13,10 +11,10 @@
             "4"=>"Jueves",
             "5"=>"Viernes",
             "6"=>"Sabado"
-            );
+            ),
             
 
-        $b = array
+        $a => array
         (
             "Primero"=>"Domingo",
             "Segundo"=>"Lunes",
@@ -26,11 +24,10 @@
             "Sexto"=>"Viernes",
             "Septimo"=>"Sabado"
             
+        )
         );  
-       
-print_r($a) ;
-"<br>";
-print_r($b) ;
+        
+echo $tablas["Sa"]["1"], "<br>";
+echo $tablas[$a]["Cuarto"], "<br>";
 
 ?>
-</pre>
