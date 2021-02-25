@@ -1,0 +1,3 @@
+La diferencia entre los métodos get y post radica en la forma de enviar los datos a la página cuando se pulsa el botón “Enviar”.
+Mientras que el método GET envía los datos usando la URL, el método POST los envía de forma que no podemos verlos (en un segundo plano u "ocultos" al usuario).
+Otra diferencia es que por el metodo GET solo se pueden enviar archivos de texto plano, mientras que por el metodo POST se pueden enviar otro tipo de archivos y arrays.
