@@ -1,3 +1,25 @@
+<?php
+
+  include "common/utils.php";
+  include "common/config.php";
+  include "common/mysql.php";
+
+  /*include "includes/config.php";
+
+  debug ( $config);*/
+
+
+  # conectamos con la base de datos
+  $connection = Connect( $config['database']);
+
+  $sql  = "select * from images where enabled = 1 order by id desc";
+
+  $rows = ExecuteQuery( $sql, $connection);
+
+  Close( $connection);
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,7 +54,6 @@
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
-            
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
@@ -40,20 +61,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/index.php">Galeria de imágenes</a>
+                <a class="navbar-brand" href="#">GALERÍA DE IMÁGENES</a>
             </div>
-             
-          
-
+            <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-               
                 <ul class="nav navbar-nav">
+                    
                     <li>
                         <a href="admin/index.php?page=login">Accede ó Regístrate</a>
                     </li>
                 </ul>
-            
-
             </div>
             <!-- /.navbar-collapse -->
         </div>
@@ -61,36 +78,31 @@
     </nav>
 
     <!-- Page Content -->
+    
+      <!-- Page Content -->
     <div class="container">
 
-        <div class="row">
+      <div class="row">
 
-            <div class="col-lg-12">
-                <h1 class="page-header">Galeria de miniaturas</h1>
-            </div>
-
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="images/castillo.jpg">
-                    <img class="img-responsive" src="images/castillo.jpg" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="images/isla.jpg">
-                    <img class="img-responsive" src="images/isla.jpg" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="images/paraiso.jpg">
-                    <img class="img-responsive" src="images/paraiso.jpg" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="images/puente.jpg">
-                    <img class="img-responsive" src="images/puente.jpg" alt="">
-                </a>
-            </div>
-            
+        <div class="col-lg-12">
+            <h1 class="page-header">Galería de miniaturas</h1>
         </div>
+
+        <?php
+
+          foreach ( $rows as $row) 
+          {
+            echo '<div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                  <a class="thumbnail" href="#">
+                      <img class="img-responsive css_img" src="images/'.$row['file'].'" alt="">
+                      
+                  </a>'.$row['name'].'
+              </div>';
+          }
+
+        ?>
+
+      </div>
 
         <hr>
 
@@ -98,7 +110,7 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Mi galeria de fotos 2021</p>
+                    <p></p>
                 </div>
             </div>
         </footer>
