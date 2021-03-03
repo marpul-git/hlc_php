@@ -1,0 +1,14 @@
+CONEXION CON BASE DE DATOS	
+
+'host' => 'localhost',
+'username' => 'root',
+'password' => 'root',
+'database' => 'galeria',
+
+DATOS DE USUARIOS YA CREADOS
+
+ NOMBRE 'Mario' EMAIL 'marpul3@hotmail.com' PASSWORD marpul3
+ NOMBRE 'Carlos' EMAIL 'carlos@gmail.com' PASSWORD carlos
+ NOMBRE 'pepa' EMAIL pepa@gmail.com' PASSWORD pepa
+ NOMBRE 'Marta' EMAIL 'marta@gmail.com'  PASSWORD marta
+ NOMBRE  'Javier'EMAIL 'javi@gmail.com'  PASSWORD javi
