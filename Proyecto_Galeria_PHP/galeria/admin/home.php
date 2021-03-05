@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Thumbnail Gallery - Start Bootstrap Template</title>
+    <title>Galeria de imagenes</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="/galeria/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">

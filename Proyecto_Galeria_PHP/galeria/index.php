@@ -10,7 +10,7 @@
   # conectamos con la base de datos
   $connection = Connect( $config['database']);
 
-  $sql  = "select * from images where enabled = 1 order by id asc";
+  $sql  = "select * from images where enabled = 1 order by id desc";
 
   $rows = ExecuteQuery( $sql, $connection);
 

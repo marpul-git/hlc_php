@@ -5,7 +5,7 @@
     <div class="col-lg-6 form_login">
       
       <form class="form-signin" method="post" action="actions/login.act.php">
-        <h4 class="form-signin-heading">Por favor, registrese</h4>
+        <h4 class="form-signin-heading">Por favor, introduzca sus datos ó registrese</h4>
         <label for="inputEmail" class="sr-only">Email</label>
         <input type="email" id="email_login" name="email_login" class="form-control frm_login_email" placeholder="Email" required autofocus>
         <label for="inputPassword" class="sr-only">Contraseña</label>
